@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>«Пример 3»</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="sections/hat :: hat"></div>
+
+<div class="container mt-1 mb-1">
+    <h2>«Общее обследование технического состояния
+        конструкций кирпичной дымовой трубы Унитарного предприятия «Витебский комбинат
+        хлебопродуктов»</h2>
+
+    <p class="lh-sm"><h5>Паспорт Объекта.</h5></p>
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Адрес объекта</td>
+            <td>г. Витебск, ул. Революционная, 30</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Время проведения обследования</td>
+            <td>сентябрь 2019г</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Организация, проводившая обследование</td>
+            <td>ООО «ТехЭкспертРеконструкция»</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Год возведения объекта</td>
+            <td>1985г</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Число этажей</td>
+            <td>Высота трубы - 42м</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Собственник объекта</td>
+            <td>УП «Витебский КХП»</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p class="lh-sm">Конструкция трубы - кирпичная в виде усеченного конуса.
+        Цоколь трубы круглый диаметром 4,86м до отм. +3.200. Выходное отверстие диаметром 1,5 м. Высота дымовой трубы
+        относительно отм. 0.000м составляет 42,200м. За отм. 0.000 принята отметка уровня отмостки у основания трубы.
+        Ходовые скобы имеются с отм. ≈ +1.100 мм с ограждением. Светофорная площадка для обслуживания оголовка на отм.
+        +39.110. Молниезащита с одним молниеприемником (стальной стержень круглого сечения диаметром 20мм, высотой
+        1000мм) и одним молниеотводом.
+        Ствол трубы укреплен 27 стяжными кольцами с шагом от 1200 мм до 1700 мм.
+        Обследование фундамента не входило в общий объем обследования. Отмостка фундамента – асфальтобетонная.
+        Предварительным осмотром выявлено, что за длительный период эксплуатации, при несоблюдении регламента работ по
+        эксплуатации данной трубы, в конструкциях трубы проявились дефекты различной степени значимости, устранение
+        которых необходимо предусмотреть при дальнейшей ее эксплуатации.
+    </p>
+
+    <figure class="figure">
+        <img width="400" height="160"
+             src="https://i.ytimg.com/vi/LxOsT119Oxk/maxresdefault.jpg"
+             class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption"><h5>Состояние футеровки дымовой трубы.</h5></figcaption>
+    </figure>
+    <figure class="figure">
+        <img width="400" height="160"
+             src="https://promalpikom.ru/upload/iblock/f1e/f1ea0468b022d446010c689bf87428b2.jpg"
+             class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption"><h5>Деструкция кирпичной кладки.</h5></figcaption>
+    </figure>
+    <figure class="figure">
+        <img width="400" height="160"
+             src="https://gospromnadzor.mchs.gov.by/upload/resize_cache/iblock/83b/936_1262_1fa35588cfbf8b57f0d0d344a6b489240/img_20181120_103528.jpg"
+             class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption"><h5>Состояние кладки трубы.</h5></figcaption>
+    </figure>
+</div>
+
+<div th:insert="sections/footer :: footer"></div>
+</body>
+</html>

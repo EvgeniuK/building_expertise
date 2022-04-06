@@ -30,6 +30,10 @@ public class SampleController {
     public String example2(Model model) {
         return "example2";
     }
+    @GetMapping("/example3")
+    public String example3(Model model) {
+        return "example3";
+    }
 
     @GetMapping("/expertise")
     public String expert(Model model) {
