@@ -26,13 +26,20 @@ public class SampleController {
     public String example1(Model model) {
         return "example1";
     }
+
     @GetMapping("/example2")
     public String example2(Model model) {
         return "example2";
     }
+
     @GetMapping("/example3")
     public String example3(Model model) {
         return "example3";
+    }
+
+    @GetMapping("/example-all")
+    public String example4(Model model) {
+        return "example-all";
     }
 
     @GetMapping("/expertise")
