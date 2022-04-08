@@ -8,7 +8,9 @@
 </head>
 <body>
 <div th:insert="sections/hat :: hat"></div>
-
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 <main>
 
     <section class="py-5 text-center container">

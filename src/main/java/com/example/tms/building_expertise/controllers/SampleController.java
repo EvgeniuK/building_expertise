@@ -16,7 +16,7 @@ public class SampleController {
     @Autowired
     private BuildingsDataRepository buildingsDataRepository;
 
-    @GetMapping("/")
+    @GetMapping("/expertise")
     public String home(Model model) {
         model.addAttribute("title", "Главная страница");
         return "home";
@@ -42,7 +42,7 @@ public class SampleController {
         return "example-all";
     }
 
-    @GetMapping("/expertise")
+    @GetMapping("/")
     public String expert(Model model) {
         return "expert-main";
     }
