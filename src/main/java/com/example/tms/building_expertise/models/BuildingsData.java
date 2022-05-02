@@ -1,11 +1,18 @@
 package com.example.tms.building_expertise.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BuildingsData {
 
     @Id
@@ -17,62 +24,20 @@ public class BuildingsData {
     private String floors;
     private String construct;
 
-    public Long getId() {
-        return id;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "buildingsData")
+    private List<Defects> defects = new ArrayList<>();
+    private Long previewDefectsId;
+    private LocalDateTime dateOfCreated;
+
+    @PrePersist
+    private void init(){
+        dateOfCreated = LocalDateTime.now();
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void addDefectsToBuildings(Defects defect) {
+        defect.setBuildingsData(this);
+        defects.add(defect);
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getFloors() {
-        return floors;
-    }
-
-    public void setFloors(String floors) {
-        this.floors = floors;
-    }
-
-    public String getConstruct() {
-        return construct;
-    }
-
-    public void setConstruct(String construct) {
-        this.construct = construct;
-    }
-
-    public BuildingsData() {
-    }
-
-    public BuildingsData(String address, String date, String year, String floors, String construct) {
-        this.address = address;
-        this.date = date;
-        this.year = year;
-        this.floors = floors;
-        this.construct = construct;
-    }
 }
