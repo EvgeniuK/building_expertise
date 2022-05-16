@@ -10,12 +10,15 @@
 
 <div class="container mt-5 mb-5">
     <h1>Добавление здания</h1>
-    <form action="/sample/add" method="post">
+    <form action="/sample/add" method="post" enctype="multipart/form-data">
       <input type="text" name="address" placeholder="Введите адрес объекта" class="form-control"><br>
         <input type="text" name="date" placeholder="Введите дату проведения обследования" class="form-control"><br>
         <input type="text" name="year" placeholder="Введите год строительства объекта" class="form-control"><br>
         <input type="text" name="floors" placeholder="Введите количество этажей" class="form-control"><br>
         <textarea type="text" name="construct" placeholder="Введите общее описание здания" class="form-control"rows="5"></textarea><br>
+        <input type="file" name="file1" multiple accept="image/*,image/jpeg" placeholder="Загрузите первое фото дефекта" class="form-control"><br>
+        <input type="file" name="file2" multiple accept="image/*,image/jpeg" placeholder="Загрузите второе фото дефекта" class="form-control"><br>
+        <input type="file" name="file3" multiple accept="image/*,image/jpeg" placeholder="Загрузите третье фото дефекта" class="form-control"><br>
         <button type="submit" class="btn btn-success">Добавить здание</button>
     </form>
 </div>

@@ -11,7 +11,7 @@
 <div class="container mt-5 mb-5">
     <h1>Редактирование отчета</h1>
     <div th:each="el : ${buildingsData}">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <input type="text" th:value="${el.address}" name="address" placeholder="Введите адрес объекта"
                    class="form-control"><br>
             <input type="text" th:value="${el.date}" name="date" placeholder="Введите дату проведения обследования"
@@ -22,6 +22,11 @@
                    class="form-control"><br>
             <textarea type="text" name="construct" placeholder="Введите общее описание здания" class="form-control"
                       th:text="${el.construct}" rows="5"></textarea><br>
+            <input type="file" name="file1" multiple accept="image/*,image/jpeg" placeholder="Загрузите первое фото дефекта" class="form-control"><br>
+            <input type="file" name="file2" multiple accept="image/*,image/jpeg" placeholder="Загрузите второе фото дефекта" class="form-control"><br>
+            <input type="file" name="file3" multiple accept="image/*,image/jpeg" placeholder="Загрузите третье фото дефекта" class="form-control"><br>
+
+
             <button type="submit" class="btn btn-success">Обновить</button>
         </form>
     </div>

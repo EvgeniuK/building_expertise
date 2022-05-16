@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,14 +23,14 @@
 
 
 <div class="container">
-    <h2 class="form-signin-heading">Здравствуйте. Автоматизированное обследование зданий. </h2>
+    <h2 class="form-signing-heading">Здравствуйте. Автоматизированное обследование зданий. </h2>
     <div th:if="${param.error}" class="alert alert-danger">
         Invalid username and password.
     </div>
     <div th:if="${param.logout}" class="alert alert-success">
         You have been logged out.
     </div>
-    <form lass="form-signin" th:action="@{/login}" method="post">
+    <form class="form-signing" th:action="@{/login}" method="post">
         <p>
             <label for="username" class="sr-only">Username</label>
             <input type="text" id="username" name="username" class="form-control"

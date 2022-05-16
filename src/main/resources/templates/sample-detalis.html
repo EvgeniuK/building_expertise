@@ -12,6 +12,7 @@
     <div th:each="el : ${buildingsData}" class="alert alert-info mt-2">
         <h1 th:text="${el.address}"/>
         <p th:text="${el.construct}"/>
+        <p th:text="${el.floors}"/>
         <a th:href="'/sample/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a><br></br>
         <form th:action="'/sample/' + ${el.id} + '/remove'" method="post">
             <button class="btn btn-warning" type="submit">Удалить</button>

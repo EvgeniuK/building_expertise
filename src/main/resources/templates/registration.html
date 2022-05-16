@@ -23,14 +23,9 @@
 
 
 <div class="container">
-    <h2 class="form-signin-heading">Добавляем новых пользователей</h2>
-    <div th:if="${param.error}" class="alert alert-danger">
-        Invalid username and password.
-    </div>
-    <div th:if="${param.logout}" class="alert alert-success">
-        You have been logged out.
-    </div>
-    <form lass="form-signin" th:action="@{/registration}" method="post">
+    <h2 class="form-signing-heading">Добавляем новых пользователей</h2>
+
+    <form class="form-signing" th:action="@{/registration}" method="post">
         <p>
             <label for="username" class="sr-only">Username</label>
             <input type="text" id="username" name="username" class="form-control"
@@ -43,6 +38,7 @@
         </p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
     </form>
+
 </div>
 </body>
 </html>
